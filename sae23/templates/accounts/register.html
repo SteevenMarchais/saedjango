@@ -1,0 +1,11 @@
+{% extends 'main.html' %}   
+
+{% block content %}
+    <h4>S'enregister ici</h4>
+    
+    <form method="post">
+        {%csrf_token%}
+        {{form}}
+        <input type="submit" name="Inscription">
+    </form>
+{% endblock %}

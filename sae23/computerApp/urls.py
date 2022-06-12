@@ -1,12 +1,6 @@
-from django.urls import path
+from django.urls import path, include
 from . import views 
 
 urlpatterns = [
-	path('', views.index, name='index'),
-	path('machines/', views.machine_list_view, name='machines'),
-	path('personnel/', views.personnel_list_view, name='personnel'),
-	path('machine/<pk>',views.machine_detail_view, name='machine-detail'),
-	path('personnels/<pk>', views.personnel_detail_view, name='personnel-detail'),
-	path ('add-machine', views.machine_add_form, name='add-machine'),
-	path ('add-personnel', views.personnel_add_form, name='add-personnel'),
+	path('', views.index, name='index'),	
 ]
