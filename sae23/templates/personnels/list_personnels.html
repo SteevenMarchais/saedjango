@@ -7,16 +7,28 @@
         <h5>Liste du Personnel</h5>
         <hr>
         <div class="card card-body">
-            <a class="btn btn-primary btn-sm btn-block" href="">Ajouter un Personnels</a>
+            <a class="btn btn-primary btn-sm btn-block" href="">Ajouter un Personnel</a>
             <table class="table table-sm">
                 <tr>
                     <th></th>
-                    <th>Numéro de Sécurité sociale</th>
+                    <th>Numéro de sécurité sociale</th>
                     <th>Nom</th>
-                    <th>Prenom</th>
-                    <th>Machines Personnels</th>
-                    <th>Lieu de travail</th>
+                    <th>Prénom</th>
+                    <th>Machines Perso</th>   
+                    <th>Lieu de travail</th>   
+                    <th>Maintenance</th>   
+
                 </tr>
+                {% for personnel in personnels %}
+                    <th></th>
+                    <th>{{personnel.secu}}</th>
+                    <th>{{personnel.nom}}</th>
+                    <th>{{personnel.prenom}}</th>
+                    <th>{{personnel.machine_perso}}</th>
+                    <th>{{personnel.lieu_travail}}</th>
+                    <th>{{personnel.date_de_maintenance}}</th>
+
+                {% endfor %}
             </table>
         </div>
     </div>

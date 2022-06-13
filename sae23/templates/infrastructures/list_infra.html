@@ -13,10 +13,17 @@
                     <th></th>
                     <th>Nom</th>
                     <th>Position géographique</th>
-                    <th>Machines</th>
-                    <th>Personnels</th>
                     <th>Responsable</th>
+                    <th>Maintenance</th>
                 </tr>
+                {% for infra in infras %}
+                    <th></th>
+                    <th>{{infra.nom}}</th>
+                    <th>{{infra.position}}</th>
+                    <th></th>
+                    <th>{{infra.date_de_maintenance}}</th>
+
+                {% endfor %}
             </table>
         </div>
     </div>

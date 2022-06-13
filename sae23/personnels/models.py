@@ -22,3 +22,6 @@ class Personnel(models.Model):
                 max_length=15)
 
     date_de_maintenance = models.DateField(default = datetime.now())
+
+    def __str__(self):
+        return self.secu

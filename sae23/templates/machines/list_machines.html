@@ -14,8 +14,15 @@
                     <th>Numéro de la Machine</th>
                     <th>Propriétaire</th>
                     <th>Infrastructures</th>
-                    
+                    <th>Dernière Modification</th>   
                 </tr>
+                {% for machine in machines %}
+                    <th></th>
+                    <th>{{machine.id}}</th>
+                    <th></th>
+                    <th>{{machine.infra}}</th>
+                    <th>{{machine.maintenanceDate}}</th>
+                {% endfor %}
             </table>
         </div>
     </div>
