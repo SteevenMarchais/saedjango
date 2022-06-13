@@ -12,7 +12,5 @@ class Infrastructures(models.Model):
     responsable=models.ForeignKey(Personnel, null=True, on_delete=models.SET_NULL)
     date_de_maintenance = models.DateField(default = datetime.now())
 
-    def __str__(self):
-        return self.nom
-    
+   
     

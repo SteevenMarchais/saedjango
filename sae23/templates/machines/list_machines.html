@@ -3,25 +3,30 @@
 {% block content %}
 <br>
 <div class='row'>
-    <div class="col-md-5">
+    <div>
         <h5>Liste des Machines</h5>
         <hr>
         <div class="card card-body">
-            <a class="btn btn-primary btn-sm btn-block" href="">Ajouter une Machine</a>
+            <a class="btn btn-primary btn-sm btn-block" href="/admin/machines/machine/add/">Ajouter une Machine</a>
             <table class="table table-sm">
                 <tr>
                     <th></th>
-                    <th>Numéro de la Machine</th>
+                    <th>Numéro de la Machine</a></th>
                     <th>Propriétaire</th>
                     <th>Infrastructures</th>
-                    <th>Dernière Modification</th>   
+                    <th>Dernière Modification</th>
+                    <th>Mettre a jour</th>
+                    <th>Supprimer</th>   
                 </tr>
                 {% for machine in machines %}
                     <th></th>
-                    <th>{{machine.id}}</th>
-                    <th></th>
+                    <th><a href="">{{machine.id}}</a></th>
+                    <th>{{machine.proprietaire}}</th>
                     <th>{{machine.infra}}</th>
                     <th>{{machine.maintenanceDate}}</th>
+                    <th><a href=''>Mettre a jour</a></th>
+                    <th><a href="">Supprimer</a></th>
+                    
                 {% endfor %}
             </table>
         </div>

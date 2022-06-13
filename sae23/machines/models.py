@@ -20,8 +20,5 @@ class Machine(models.Model):
     infra = models.CharField(max_length=200)
     maintenanceDate = models.DateField(default = datetime.now())
 
-    def __str__(self):
-        return self.id
-
 
      
