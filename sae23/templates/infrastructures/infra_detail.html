@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block content %}
+<ul>
+    <li><p>Nom : {{infra.nom}} </p></li>
+    <li><p>Position géographique : {{infra.position}}</p></li>
+    <li><p>responsable : {{infra.responsable}}</p></li>
+    <li><p>maintenance : {{infra.date_de_maintenance}}</p></li> 
+</ul>
+{% endblock %}

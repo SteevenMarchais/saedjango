@@ -15,4 +15,4 @@ def list_machines(request):
 def machines_detail(request, pk):
 	machines = get_object_or_404 (Machine, id=pk)
 	context={'machines': machines}
-	return render(request, 'machines/machines_detail.html', context)
+	return render(request, 'machines/machines_details.html', context)

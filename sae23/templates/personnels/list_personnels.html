@@ -22,16 +22,17 @@
 
                 </tr>
                 {% for personnel in personnels %}
-                    <th></th>
-                    <th>{{personnel.secu}}</th>
-                    <th>{{personnel.nom}}</th>
-                    <th>{{personnel.prenom}}</th>
-                    <th>{{personnel.machine_perso}}</th>
-                    <th>{{personnel.lieu_travail}}</th>
-                    <th>{{personnel.date_de_maintenance}}</th>
-                    <th><a href=''>Mettre a jour</a></th>
-                    <th><a href="">Supprimer</a></th>
-
+                    <tr>
+                        <th></th>
+                        <th><a href="{% url 'personnel-detail' personnel.secu %}">{{personnel.secu}}</a></th>
+                        <th>{{personnel.nom}}</th>
+                        <th>{{personnel.prenom}}</th>
+                        <th>{{personnel.machine_perso}}</th>
+                        <th>{{personnel.lieu_travail}}</th>
+                        <th>{{personnel.date_de_maintenance}}</th>
+                        <th><a href=''>Mettre a jour</a></th>
+                        <th><a href="">Supprimer</a></th>
+                    </tr>
                 {% endfor %}
             </table>
         </div>

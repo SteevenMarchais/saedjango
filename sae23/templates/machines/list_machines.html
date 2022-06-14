@@ -19,14 +19,15 @@
                     <th>Supprimer</th>   
                 </tr>
                 {% for machine in machines %}
-                    <th></th>
-                    <th><a href="">{{machine.id}}</a></th>
-                    <th>{{machine.proprietaire}}</th>
-                    <th>{{machine.infra}}</th>
-                    <th>{{machine.maintenanceDate}}</th>
-                    <th><a href=''>Mettre a jour</a></th>
-                    <th><a href="">Supprimer</a></th>
-                    
+                    <tr>
+                        <th></th>
+                        <th><a href="{% url 'machine-detail' machine.id %}">{{machine.id}}</a></th>
+                        <th>{{machine.proprietaire}}</th>
+                        <th>{{machine.infra}}</th>
+                        <th>{{machine.maintenanceDate}}</th>
+                        <th><a href=''>Mettre a jour</a></th>
+                        <th><a href="">Supprimer</a></th>
+                    </tr>
                 {% endfor %}
             </table>
         </div>

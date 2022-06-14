@@ -19,14 +19,15 @@
                     <th>Supprimer</th>
                 </tr>
                 {% for infra in infras %}
-                    <th></th>
-                    <th>{{infra.nom}}</th>
-                    <th>{{infra.position}}</th>
-                    <th>{{infra.responsable}}</th>
-                    <th>{{infra.date_de_maintenance}}</th>
-                    <th><a href=''>Mettre a jour</a></th>
-                    <th><a href="">Supprimer</a></th>
-
+                    <tr>        
+                        <th></th>
+                        <th><a href="{% url 'infra-detail' infra.nom %}">{{infra.nom}}</a></th>
+                        <th>{{infra.position}}</th>
+                        <th>{{infra.responsable}}</th>
+                        <th>{{infra.date_de_maintenance}}</th>
+                        <th><a href=''>Mettre a jour</a></th>
+                        <th><a href="">Supprimer</a></th>
+                    </tr>
                 {% endfor %}
             </table>
         </div>
